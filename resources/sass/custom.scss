@@ -1,0 +1,111 @@
+@import "lbd/variables";
+
+// login page
+#login-card {
+    border: 0;
+    box-shadow: 0 0 15px 9px #00000096;
+    border-radius: 0;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.card .card-footer div {
+    display: block;
+}
+
+.card-footer {
+    margin-top: 1rem;
+}
+
+.card-header {
+    margin-bottom: 1rem;
+}
+
+dl {
+    width: 605px;
+}
+
+dt {
+    float: left;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+dd {
+    float: left;
+    width: 400px;
+    overflow: hidden;
+    margin-left: 3px;
+}
+
+dt:after {
+    content: " .................................................................................. ";
+}
+
+.field-required:after {
+    content: " *";
+    color: $danger-color;
+    // color: #ff0000;
+}
+
+.inner {
+    border-bottom: 1px solid $light-gray;
+}
+
+.avatar {
+    max-height: 35px;
+    max-width: 35px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    // border: 1px solid $light-gray;
+    padding: 1px;
+    // box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
+    box-shadow: 0 0 2px 2px $light-gray;
+    // flex-shrink: 0;
+}
+
+.image-preview-input {
+    position: relative;
+	overflow: hidden;
+	margin: 0px;    
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;    
+}
+.image-preview-input input[type=file] {
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 margin: 0;
+	 padding: 0;
+	 font-size: 20px;
+	 cursor: pointer;
+	 opacity: 0;
+	 filter: alpha(opacity=0);
+}
+.image-preview-input-title {
+    margin-left:2px;
+}
+
+.material-icons {
+    font-size: 1rem;
+}
+
+#avatar-column {
+    min-height: 110px;
+}
+#v2-img-tag {
+    border: 1px solid;
+    padding: 2px;
+    box-shadow: 1px 1px 4px 4px #00000096;   
+}
