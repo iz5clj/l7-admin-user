@@ -109,3 +109,15 @@ dt:after {
     padding: 2px;
     box-shadow: 1px 1px 4px 4px #00000096;   
 }
+
+#close {
+    float: right;
+    display: block;
+    padding: 2px 5px;
+    background-color: green;
+}
+
+#close:hover {
+    color: #fff;
+    cursor: pointer;
+}

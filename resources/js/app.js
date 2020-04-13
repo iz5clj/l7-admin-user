@@ -15,7 +15,11 @@
 
     setTimeout(function() {
         $('#session-message').fadeOut('slow');
-    }, 2000); // <-- time in milliseconds
+    }, 5000); // <-- time in milliseconds
+
+    $('#close').click(function(){
+        $('#session-message').fadeOut('fast');
+    });
 
     $(window).on('load',function(){
         

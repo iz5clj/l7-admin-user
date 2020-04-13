@@ -18,11 +18,13 @@
                 <div class="container-fluid">
                     @if (session('success'))
                     <div id="session-message" class="alert alert-success">
+                        <span id="close">X</span>
                         {{ session('success') }}
                     </div>
                     @endif
                     @if (session('warning'))
                     <div id="session-message" class="alert alert-warning">
+                        {{-- <span id="close">X</span> --}}
                         {{ session('warning') }}
                     </div>
                     @endif
