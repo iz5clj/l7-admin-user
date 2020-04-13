@@ -32,6 +32,6 @@ mix.sass('resources/sass/app.scss', 'public/assets/css').version();
 mix.sass('resources/sass/custom.scss', 'public/assets/css').version();
 
 mix.browserSync({
-    proxy: 'sabatino.test',
+    proxy: 'l7base.test',
     open: false
 });

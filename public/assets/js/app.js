@@ -1,1 +1,28 @@
-!function(e){"use strict";if("undefined"!=typeof jQuery){var t=jQuery.fn.jquery;e("#jquery-text").attr("class","text-success"),e("#jquery-text").html("Jquery version is: "+t)}e('[data-toggle="tooltip"]').tooltip(),setTimeout(function(){e("#session-message").fadeOut("slow")},5e3),e("#close").click(function(){e("#session-message").fadeOut("fast")}),e(window).on("load",function(){})}(jQuery);
+
+(function ($) {
+    'use strict';
+
+    if (typeof jQuery != 'undefined') {  
+        // jQuery is loaded => print the version
+        var version = jQuery.fn.jquery;
+
+        $("#jquery-text").attr('class', 'text-success');
+        $("#jquery-text").html("Jquery version is: " + version);
+
+    }
+
+    $('[data-toggle="tooltip"]').tooltip();
+
+    setTimeout(function() {
+        $('#session-message').fadeOut('slow');
+    }, 5000); // <-- time in milliseconds
+
+    $('#close').click(function(){
+        $('#session-message').fadeOut('fast');
+    });
+
+    $(window).on('load',function(){
+        
+    });
+
+})(jQuery);
