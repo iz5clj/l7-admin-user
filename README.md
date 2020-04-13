@@ -11,13 +11,15 @@
 + In my case I also give 775 to *public/assets/images* directory because my app store the avatar images in that directory. This is maybe something to change in the future, and use the storage directory with a symlink.
 + In the file `webpack.mix.js` change the *proxy* variable with your desired url.
 + run `npm install` to install all the necessary *js* and *css* libraries.
-+ run php artisan `ide-helper:generate`. Necessary for your editor to recognize all the classes and functions.
++ Create a new `.env` file, or create it from copying the existing `.env.example`.
++ run `php artisan ide-helper:generate`. Necessary for your editor to recognize all the classes and functions.  
+Reload your editor if it is opened.
 + Run this command to generate a key for Laravel's encrypter: `php artisan key:generate`.
 + `php artisan migrate:refresh --seed` to create the tables in the database and seed some users.
 + If you are working in a Windows environement update your `hosts` file with correct settings: domain name and ip.
 + If you are working in a mixed environement (linux+windows) update the `hosts` file in linux also.
 + Choose wich icons to use: *Fontawesome* or *Google icons*.
-+ Create a new `.env` file, or create it from copying the existing `.env.example`.
+
 + The bootstrap version of the auth package from laravel has already been downloaded and installed. [Laravel docs](https://laravel.com/docs/7.x/authentication#included-routing)
 
 ## TODO
