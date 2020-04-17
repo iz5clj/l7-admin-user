@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use App\Http\Requests\UpdateUserRequest;
+use Storage;
 
 class UserController extends Controller
 {
@@ -38,7 +39,8 @@ class UserController extends Controller
         if ($request->hasFile('avatar')) {
             $avatar = $request->file('avatar');
             $filename = time() . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->fit(200)->save( public_path('/assets/images/avatar/' . $filename));
+            $image = Image::make($avatar)->fit(200);
+            Storage::disk('avatar')->put($filename, $image->stream());
             $user->avatar  = $filename;
         } 
 

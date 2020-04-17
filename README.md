@@ -2,13 +2,13 @@
 
 ## Install
 
-+ git clone this repo in the directory of your choice. Or make a repo from this tempalte.
++ git clone this repo in the directory of your choice. Or make a repo from this template.
 + `composer install` will install all necessary packages in *vendor* directory.
 + Because I am using *clockwork*, inside the *storage* directory, create a *clockwork* directory and `chmod 775 storage/clockwork`. this directory shoud be already created.
 + `chmod -R 775 databse/ storage/` will give apache the write permissions to thos 2 directories.
 + If you use *SqLite*, `touch database/database.sqlite` will create an empty file. 
 + `chmod 775 database/database.sqlite` will give write permissions to apache to use this file.
-+ In my case I also give 775 to *public/assets/images* directory because my app store the avatar images in that directory. This is maybe something to change in the future, and use the storage directory with a symlink.
++ ~~In my case I also give 775 to *public/assets/images* directory because my app store the avatar images in that directory. This is maybe something to change in the future, and use the storage directory with a symlink.~~
 + In the file `webpack.mix.js` change the *proxy* variable with your desired url.
 + run `npm install` to install all the necessary *js* and *css* libraries.
 + Create a new `.env` file, or create it from copying the existing `.env.example`.
@@ -25,6 +25,6 @@ Reload your editor if it is opened.
 ## TODO
 
 + Where to store avatar images?  
-All the logic behind the storage and check,
-Check if it is a goof idea to make it nullable in database tables  
-Where to store the files? in the storage directory.
+~~All the logic behind the storage and check,~~  
+~~Check if it is a goof idea to make it nullable in database tables~~  
+~~Where to store the files? in the storage directory.~~  

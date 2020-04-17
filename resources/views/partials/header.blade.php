@@ -17,9 +17,9 @@
 
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         @if(Auth::user()->avatar)
-                        <img class="avatar" src="{{ '/assets/images/avatar/' . Auth::user()->avatar }}" alt="Av" />
+                        <img class="avatar" src="{{ Storage::disk('avatar')->url(Auth::user()->avatar) }}" alt="." />
                         @else
-                        <img class="avatar" src="/assets/images/avatar/default.png" alt="Av" />
+                        <img class="avatar" src="{{ Storage::disk('avatar')->url('default.png') }}" alt="Av" />
                         @endif
                         <span>{{ Auth::user()->name }}</span>
                     </a>
