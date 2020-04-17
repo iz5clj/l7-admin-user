@@ -2,7 +2,7 @@
 
 ## Install
 
-+ git clone this repo in the directory of your choice.
++ git clone this repo in the directory of your choice. Or make a repo from this tempalte.
 + `composer install` will install all necessary packages in *vendor* directory.
 + Because I am using *clockwork*, inside the *storage* directory, create a *clockwork* directory and `chmod 775 storage/clockwork`. this directory shoud be already created.
 + `chmod -R 775 databse/ storage/` will give apache the write permissions to thos 2 directories.

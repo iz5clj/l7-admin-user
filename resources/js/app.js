@@ -13,13 +13,26 @@
 
     $('[data-toggle="tooltip"]').tooltip();
 
-    setTimeout(function() {
-        $('#session-message').fadeOut('slow');
-    }, 5000); // <-- time in milliseconds
+    // begin::message window auto fade out
 
-    $('#close').click(function(){
-        $('#session-message').fadeOut('fast');
+    var counter = 5;
+
+    setInterval(function () {
+        counter--;
+        if (counter >= 0) {
+            $('.count_number').html(counter);
+        }
+        if (counter === 0) {
+            clearInterval(counter);
+            $(".session-message").fadeOut();
+        }
+    }, 1000);
+
+    $('.count_number').click(function(){
+        $('.session-message').fadeOut();
     });
+
+    // end::message window auto fade out
 
     $(window).on('load',function(){
         

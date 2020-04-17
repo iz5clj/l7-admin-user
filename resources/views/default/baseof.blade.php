@@ -17,13 +17,15 @@
             <div class="content">
                 <div class="container-fluid">
                     @if (session('success'))
-                    <div id="session-message" class="alert alert-success">
-                        <span id="close">X</span>
+                    <div class="session-message alert alert-success">
+                        <button type="button" class="chiusura btn btn-success">
+                            {{ __('m.close in') }} <span class="count_number">5</span> {{ __('m.seconds') }}
+                        </button>
                         {{ session('success') }}
                     </div>
                     @endif
                     @if (session('warning'))
-                    <div id="session-message" class="alert alert-warning">
+                    <div class="session-message alert alert-warning">
                         {{-- <span id="close">X</span> --}}
                         {{ session('warning') }}
                     </div>

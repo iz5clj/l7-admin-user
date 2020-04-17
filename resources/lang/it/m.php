@@ -1,7 +1,5 @@
 <?php
 
-// resources/lang/it/m.php
-
 return [
     'welcome'          => 'Benvenuto',
     'name'             => 'Nome',
@@ -20,4 +18,7 @@ return [
     'your profile'     => 'Il tuo profilo.',
     'remove avatar'    => 'Non voglio un avatar',
     'data updated'     => 'Tutti i dati sono stati aggiornati.',
+    'seconds'          => 'secondi',
+    'close in'         => 'Chiudo in'
+
 ];

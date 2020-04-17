@@ -107,14 +107,12 @@ dt:after {
   box-shadow: 1px 1px 4px 4px #00000096;
 }
 
-#close {
+.chiusura {
   float: right;
-  display: block;
-  padding: 2px 5px;
-  background-color: green;
+  padding: 0 5px;
 }
 
-#close:hover {
+.count_number:hover {
   color: #fff;
   cursor: pointer;
 }
