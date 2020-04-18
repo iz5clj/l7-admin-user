@@ -14,15 +14,10 @@
             <ul class="navbar-nav ml-auto">
                 {{-- begin::Profile --}}
                 <li class="nav-item dropdown">
-
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        @if(Auth::user()->avatar)
-                        <img class="avatar" src="{{ Storage::disk('avatar')->url(Auth::user()->avatar) }}" alt="." />
-                        @else
-                        <img class="avatar" src="{{ Storage::disk('avatar')->url('default.png') }}" alt="Av" />
-                        @endif
-                        <span>{{ Auth::user()->name }}</span>
+                        <x-avatar-image-display :user="Auth::user()"/>
                     </a>
+                    {{-- begin::dropdown menu --}}
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a href="{{ route('userModify', Auth::user()->id ) }}" class="dropdown-item">Profile</a>
                         <div class="divider"></div>
@@ -33,6 +28,7 @@
                             @csrf
                         </form>
                     </div>
+                    {{-- end::dropdown menu --}}
                 </li>
                 {{-- end::profile --}}
             </ul>

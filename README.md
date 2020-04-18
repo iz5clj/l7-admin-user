@@ -8,7 +8,11 @@
 + `chmod -R 775 databse/ storage/` will give apache the write permissions to thos 2 directories.
 + If you use *SqLite*, `touch database/database.sqlite` will create an empty file. 
 + `chmod 775 database/database.sqlite` will give write permissions to apache to use this file.
-+ ~~In my case I also give 775 to *public/assets/images* directory because my app store the avatar images in that directory. This is maybe something to change in the future, and use the storage directory with a symlink.~~
++ ~~In my case I also give 775 to *public/assets/images* directory because my app store the avatar images in that directory. This is maybe      something to change in the future, and use the storage directory with a symlink.~~
++ `php artisan storage:link` will create 2 symlinks in the public directory:  
+    + avatar -> storage/app/public/assets/images/avatar/
+    + storage ->  storage/app/public/
++ Check that the file `storage/app/public//assets/images/avatar/default.png` exists.    
 + In the file `webpack.mix.js` change the *proxy* variable with your desired url.
 + run `npm install` to install all the necessary *js* and *css* libraries.
 + Create a new `.env` file, or create it from copying the existing `.env.example`.
